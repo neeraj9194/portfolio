@@ -1,0 +1,84 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+body h1, body h2 {
+  font-family: 'Reem Kufi', sans-serif;
+  text-align: center;
+}
+
+body h3, body p {
+  font-family: 'Redressed', cursive;
+  text-align: center;
+}
+
+.side-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFAF2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25vw;
+  padding: 30px;
+}
+
+.side-bar .portfolio-image {
+  background-image: url("/assets/portfolio.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-position-x: 30%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.side-bar .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.side-bar .skills .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.side-bar .skills .progress p {
+  width: 100px;
+  margin: 1em;
+  text-align: right;
+}
+
+.side-bar .skills .progress .progress-bar, .side-bar .skills .progress .progress-70 {
+  background-color: #6FCF97;
+  height: 16px;
+  border-radius: 20px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.side-bar .skills .progress .progress-70 {
+  background-color: #028090;
+  width: 70%;
+}
+/*# sourceMappingURL=styles.css.map */
