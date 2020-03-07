@@ -2,18 +2,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0px;
-  margin-left: 0px;
+  margin: 0px;
 }
 
 body h1, body h2 {
   font-family: 'Reem Kufi', sans-serif;
   text-align: center;
+  font-size: 2.5rem;
+  line-height: 2rem;
 }
 
-body h3, body p {
+body h3, body p, body li {
   font-family: 'Redressed', cursive;
   text-align: center;
+  line-height: 2rem;
 }
 
 .side-bar {
@@ -25,8 +27,9 @@ body h3, body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 25vw;
+  width: 35vw;
   padding: 30px;
+  height: 100%;
 }
 
 .side-bar .portfolio-image {
@@ -51,6 +54,7 @@ body h3, body p {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  margin-top: 2em;
 }
 
 .side-bar .skills .progress {
@@ -60,7 +64,7 @@ body h3, body p {
 }
 
 .side-bar .skills .progress p {
-  width: 100px;
+  width: 5vw;
   margin: 1em;
   text-align: right;
 }
@@ -80,5 +84,25 @@ body h3, body p {
 .side-bar .skills .progress .progress-70 {
   background-color: #028090;
   width: 70%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px auto;
+  padding: 0 5vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.2rem;
+}
+
+.container .experience p, .container .experience li {
+  text-align: left;
 }
 /*# sourceMappingURL=styles.css.map */
