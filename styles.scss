@@ -7,14 +7,21 @@ body {
     display: flex;
     margin: 0px;
     
-    h1,h2 {
-        font-family: 'Reem Kufi', sans-serif;
+    h1, h2, h3, h4 {
+        font-family: 'Playfair Display', serif;
         text-align: center;
-        font-size: 2.5rem;
-        line-height: 2rem;
+
     }
-    h3, p, li {
-        font-family: 'Redressed', cursive;
+    h1 {
+        font-size: 2.5em;
+        line-height: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+    p, li {
+        font-family: 'Cambay', sans-serif;
         text-align: center;
         line-height: 2rem;
     }
@@ -26,6 +33,10 @@ body {
     flex-direction: column;
     width: 30vw;
     padding: 20px;
+
+    h1 {
+        margin-bottom: 0;
+    }
     
     .portfolio-image {
         background-image: url("/assets/portfolio.jpeg");
@@ -78,6 +89,8 @@ body {
                 font-weight: 600;
                 text-align: right;
                 padding-right: 10px;
+                font-size: 11px;
+                line-height: 1.5;
                 // -webkit-animation: progressBar 3s ease-in-out;
                 // -webkit-animation-fill-mode:both; 
                 // -moz-animation: progressBar 3s ease-in-out;
@@ -91,6 +104,10 @@ body {
 
 section {
     margin-top: 20px;
+
+    h3 {
+        color: $primary-1;
+    }
 }
 
 .container {
@@ -100,7 +117,7 @@ section {
     width: fit-content;
     font-size: 1.2rem;
     
-    .experience {
+    .experience, .about-me {
         p, li {
             text-align: left;
             margin-left: 2rem;
@@ -126,7 +143,7 @@ section {
             width: 30vw;
             margin-top: 20px;
             
-            & p, h3 {
+            & p, h4 {
                 text-align: left;
             }
             

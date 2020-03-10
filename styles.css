@@ -5,15 +5,23 @@ body {
   margin: 0px;
 }
 
-body h1, body h2 {
-  font-family: 'Reem Kufi', sans-serif;
+body h1, body h2, body h3, body h4 {
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  font-size: 2.5rem;
-  line-height: 2rem;
 }
 
-body h3, body p, body li {
-  font-family: 'Redressed', cursive;
+body h1 {
+  font-size: 2.5em;
+  line-height: 2em;
+}
+
+body h3 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+body p, body li {
+  font-family: 'Cambay', sans-serif;
   text-align: center;
   line-height: 2rem;
 }
@@ -29,6 +37,10 @@ body h3, body p, body li {
           flex-direction: column;
   width: 30vw;
   padding: 20px;
+}
+
+.side-bar h1 {
+  margin-bottom: 0;
 }
 
 .side-bar .portfolio-image {
@@ -101,10 +113,16 @@ body h3, body p, body li {
   font-weight: 600;
   text-align: right;
   padding-right: 10px;
+  font-size: 11px;
+  line-height: 1.5;
 }
 
 section {
   margin-top: 20px;
+}
+
+section h3 {
+  color: #028090;
 }
 
 .container {
@@ -122,7 +140,7 @@ section {
   font-size: 1.2rem;
 }
 
-.container .experience p, .container .experience li {
+.container .experience p, .container .experience li, .container .about-me p, .container .about-me li {
   text-align: left;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -162,7 +180,7 @@ section {
   margin-top: 20px;
 }
 
-.projects .project-container .project-card p, .projects .project-container .project-card h3 {
+.projects .project-container .project-card p, .projects .project-container .project-card h4 {
   text-align: left;
 }
 
