@@ -1,6 +1,7 @@
 $secondary: #FFFAF2; 
 $primary-1: #028090;
 $primary-green: #6FCF97;
+$progress-background: #d4d0cb;
 
 body {
     display: flex;
@@ -60,7 +61,7 @@ body {
                 position: relative;
                 max-width: 350px;
                 flex: 2;
-                background: $primary-green;
+                background: $progress-background;
                 align-self: center;
                 overflow: hidden;
                 span {
@@ -72,6 +73,11 @@ body {
             
             .progress-bar {
                 background-color: $primary-1;
+                color: white;
+                font-family: monospace;
+                font-weight: 600;
+                text-align: right;
+                padding-right: 10px;
                 // -webkit-animation: progressBar 3s ease-in-out;
                 // -webkit-animation-fill-mode:both; 
                 // -moz-animation: progressBar 3s ease-in-out;
@@ -81,29 +87,6 @@ body {
         }
     }
 }
-
-// .progress {
-//     display: flex;
-//     justify-content: center;
-//     p{
-//         width: 5vw;
-//         margin: 1em;
-//         text-align: center;
-//     }
-//     .progress-bar {
-//         max-width: 350px;
-//         background-color: $primary-green;
-//         height: 16px;
-//         border-radius: 20px;
-//         flex-grow: 2;
-//         align-self: center;
-//     }
-//     .progress-70 {
-//         // @extend .progress-bar;
-//         background-color: $primary-1;
-//         width: 70%;
-//     }
-// }
 
 
 section {
