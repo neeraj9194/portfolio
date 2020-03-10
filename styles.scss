@@ -10,19 +10,20 @@ body {
     h1, h2, h3, h4 {
         font-family: 'Playfair Display', serif;
         text-align: center;
-
+        
     }
     h1 {
-        font-size: 2.5em;
+        font-size: 3em;
+        font-weight: 900;
         line-height: 2em;
     }
     h3 {
-        font-size: 1.5em;
+        font-style: italic;
+        font-size: 2em;
         line-height: 2em;
     }
-    p, li {
+    p, li, ul {
         font-family: 'Cambay', sans-serif;
-        text-align: center;
         line-height: 2rem;
     }
 }
@@ -33,7 +34,7 @@ body {
     flex-direction: column;
     width: 30vw;
     padding: 20px;
-
+    
     h1 {
         margin-bottom: 0;
     }
@@ -62,6 +63,7 @@ body {
             justify-content: center;
             
             p{
+                font-style: italic;
                 width: 5vw;
                 margin: 1em;
                 text-align: center;
@@ -104,7 +106,7 @@ body {
 
 section {
     margin-top: 20px;
-
+    
     h3 {
         color: $primary-1;
     }
@@ -118,11 +120,12 @@ section {
     font-size: 1.2rem;
     
     .experience, .about-me {
-        p, li {
-            text-align: left;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .about-me {
+        text-align: center;
     }
 }
 
@@ -139,7 +142,7 @@ section {
         
         .project-card {
             background: linear-gradient(180deg, #FFFFFF 6.77%, rgba(255, 255, 255, 0.603352) 43.75%, rgba(255, 255, 255, 0) 100%), $secondary;
-            padding: 10px;
+            padding: 20px;
             width: 30vw;
             margin-top: 20px;
             
@@ -147,17 +150,20 @@ section {
                 text-align: left;
             }
             
-            & h3 {
+            & h4 {
                 margin-top: 0;
             }
             
             .project-heading {
                 display: flex;
                 flex-direction: row;
+
+                .project-title {
+                    margin-left: 20px;
+                }
                 
                 .project-image {
-                    margin: 0 20px;
-                    
+
                     img {
                         width: 250px;
                         height: 170px;
@@ -183,7 +189,7 @@ section {
         .skills {
             .progress {
                 flex-direction: column;
-
+                
                 p{
                     width: unset;
                 }
@@ -194,7 +200,7 @@ section {
             }
         }
     }
-
+    
     .projects {
         .project-container {
             .project-card {

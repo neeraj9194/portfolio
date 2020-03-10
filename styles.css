@@ -11,18 +11,19 @@ body h1, body h2, body h3, body h4 {
 }
 
 body h1 {
-  font-size: 2.5em;
+  font-size: 3em;
+  font-weight: 900;
   line-height: 2em;
 }
 
 body h3 {
-  font-size: 1.5em;
+  font-style: italic;
+  font-size: 2em;
   line-height: 2em;
 }
 
-body p, body li {
+body p, body li, body ul {
   font-family: 'Cambay', sans-serif;
-  text-align: center;
   line-height: 2rem;
 }
 
@@ -80,6 +81,7 @@ body p, body li {
 }
 
 .side-bar .skills .progress p {
+  font-style: italic;
   width: 5vw;
   margin: 1em;
   text-align: center;
@@ -140,10 +142,13 @@ section h3 {
   font-size: 1.2rem;
 }
 
-.container .experience p, .container .experience li, .container .about-me p, .container .about-me li {
-  text-align: left;
+.container .experience, .container .about-me {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.container .about-me {
+  text-align: center;
 }
 
 .projects {
@@ -175,7 +180,7 @@ section h3 {
 .projects .project-container .project-card {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(6.77%, #FFFFFF), color-stop(43.75%, rgba(255, 255, 255, 0.603352)), to(rgba(255, 255, 255, 0))), #FFFAF2;
   background: linear-gradient(180deg, #FFFFFF 6.77%, rgba(255, 255, 255, 0.603352) 43.75%, rgba(255, 255, 255, 0) 100%), #FFFAF2;
-  padding: 10px;
+  padding: 20px;
   width: 30vw;
   margin-top: 20px;
 }
@@ -184,7 +189,7 @@ section h3 {
   text-align: left;
 }
 
-.projects .project-container .project-card h3 {
+.projects .project-container .project-card h4 {
   margin-top: 0;
 }
 
@@ -198,8 +203,8 @@ section h3 {
           flex-direction: row;
 }
 
-.projects .project-container .project-card .project-heading .project-image {
-  margin: 0 20px;
+.projects .project-container .project-card .project-heading .project-title {
+  margin-left: 20px;
 }
 
 .projects .project-container .project-card .project-heading .project-image img {
