@@ -27,17 +27,18 @@ body h3, body p, body li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 35vw;
-  padding: 30px;
-  height: 100%;
+  width: 30vw;
+  padding: 20px;
 }
 
 .side-bar .portfolio-image {
   background-image: url("/assets/portfolio.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
-  width: 200px;
+  height: 10vw;
+  width: 10vw;
+  max-width: 256px;
+  max-height: 256px;
   border-radius: 50%;
   background-position-x: 30%;
   -ms-flex-item-align: center;
@@ -61,29 +62,44 @@ body h3, body p, body li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .side-bar .skills .progress p {
   width: 5vw;
   margin: 1em;
-  text-align: right;
+  text-align: center;
 }
 
-.side-bar .skills .progress .progress-bar, .side-bar .skills .progress .progress-70 {
-  background-color: #6FCF97;
-  height: 16px;
-  border-radius: 20px;
+.side-bar .skills .progress .meter {
+  height: 15px;
+  border-radius: 25px;
+  position: relative;
+  max-width: 350px;
   -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+      -ms-flex: 2;
+          flex: 2;
+  background: #6FCF97;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  overflow: hidden;
 }
 
-.side-bar .skills .progress .progress-70 {
+.side-bar .skills .progress .meter span {
+  display: block;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.side-bar .skills .progress .progress-bar {
   background-color: #028090;
-  width: 70%;
+}
+
+section {
+  margin-top: 20px;
 }
 
 .container {
@@ -94,8 +110,7 @@ body h3, body p, body li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 20px auto;
-  padding: 0 5vw;
+  margin: 0 2vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -104,5 +119,107 @@ body h3, body p, body li {
 
 .container .experience p, .container .experience li {
   text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects .project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.projects .project-container .project-card {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(6.77%, #FFFFFF), color-stop(43.75%, rgba(255, 255, 255, 0.603352)), to(rgba(255, 255, 255, 0))), #FFFAF2;
+  background: linear-gradient(180deg, #FFFFFF 6.77%, rgba(255, 255, 255, 0.603352) 43.75%, rgba(255, 255, 255, 0) 100%), #FFFAF2;
+  padding: 10px;
+  width: 30vw;
+  margin-top: 20px;
+}
+
+.projects .project-container .project-card p, .projects .project-container .project-card h3 {
+  text-align: left;
+}
+
+.projects .project-container .project-card h3 {
+  margin-top: 0;
+}
+
+.projects .project-container .project-card .project-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projects .project-container .project-card .project-heading .project-image {
+  margin: 0 20px;
+}
+
+.projects .project-container .project-card .project-heading .project-image img {
+  width: 250px;
+  height: 170px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  max-width: 500px;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 20px 40px rgba(61, 37, 37, 0.4);
+          box-shadow: 10px 20px 40px rgba(61, 37, 37, 0.4);
+}
+
+.projects .project-container .project-card .project-heading .links img {
+  margin: 4px;
+}
+
+@media (max-width: 1200px) {
+  .side-bar .skills .progress {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .side-bar .skills .progress p {
+    width: unset;
+  }
+  .side-bar .skills .progress .meter {
+    -ms-flex-item-align: unset;
+        -ms-grid-row-align: unset;
+        align-self: unset;
+  }
+  .projects .project-container .project-card {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects .project-container .project-card .project-heading .project-image {
+    display: none;
+  }
+  .projects .project-container .project-card .project-heading .links img {
+    height: 48px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
