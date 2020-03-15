@@ -25,6 +25,7 @@ body h3 {
 body p, body li, body ul {
   font-family: 'Cambay', sans-serif;
   line-height: 2rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .side-bar {
@@ -149,6 +150,52 @@ section h3 {
 
 .container .about-me {
   text-align: center;
+}
+
+.experience .timeline-item {
+  padding: 3em 2em 2em;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  border-left: 2px solid #d4d0cb;
+}
+
+.experience .timeline-item p {
+  font-size: 1rem;
+}
+
+.experience .timeline-item h5 {
+  font-family: 'Cambay', sans-serif;
+}
+
+.experience .timeline-item::before {
+  content: attr(date-is);
+  position: absolute;
+  left: 2em;
+  font-weight: bold;
+  top: 1em;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.experience .timeline-item::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 1em;
+  position: absolute;
+  left: -7px;
+  border-radius: 10px;
+  content: '';
+  border: 2px solid #d4d0cb;
+  background: white;
+}
+
+.experience .timeline-item:last-child {
+  -o-border-image: linear-gradient(to bottom, #d4d0cb 60%, rgba(212, 208, 203, 0)) 1 100%;
+     border-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #d4d0cb), to(rgba(212, 208, 203, 0))) 1 100%;
+     border-image: linear-gradient(to bottom, #d4d0cb 60%, rgba(212, 208, 203, 0)) 1 100%;
 }
 
 .projects {

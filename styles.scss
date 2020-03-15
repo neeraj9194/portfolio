@@ -2,6 +2,7 @@ $secondary: #FFFAF2;
 $primary-1: #028090;
 $primary-green: #6FCF97;
 $progress-background: #d4d0cb;
+$black: rgba(black, .7);
 
 body {
     display: flex;
@@ -25,6 +26,7 @@ body {
     p, li, ul {
         font-family: 'Cambay', sans-serif;
         line-height: 2rem;
+        color: $black;
     }
 }
 
@@ -123,9 +125,61 @@ section {
         margin-left: 2rem;
         margin-right: 2rem;
     }
-
+    
     .about-me {
         text-align: center;
+    }
+}
+
+.experience {
+    $border-color: $progress-background;
+    
+    .timeline-item {
+        padding: 3em 2em 2em;
+        position: relative;
+        color: $black;
+        border-left: 2px solid $border-color;
+        
+        p {
+            font-size: 1rem;
+        }
+
+        h5 {
+            font-family: 'Cambay', sans-serif;
+        }
+        
+        &::before {
+            content: attr(date-is);
+            position: absolute;
+            left: 2em;
+            font-weight: bold;
+            top: 1em;
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: .9rem;
+        }
+        
+        &::after {
+            width: 10px;
+            height: 10px;
+            display: block;
+            top: 1em;
+            position: absolute;
+            left: -7px;
+            border-radius: 10px;
+            content: '';
+            border: 2px solid $border-color;
+            background: white;
+        }
+        
+        &:last-child {
+            border-image: linear-gradient(
+            to bottom,
+            $border-color 60%,
+            rgba($border-color, 0)) 1 100%
+            ;
+        }
     }
 }
 
@@ -157,13 +211,13 @@ section {
             .project-heading {
                 display: flex;
                 flex-direction: row;
-
+                
                 .project-title {
                     margin-left: 20px;
                 }
                 
                 .project-image {
-
+                    
                     img {
                         width: 250px;
                         height: 170px;
