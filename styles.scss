@@ -9,19 +9,22 @@ body {
     margin: 0px;
     
     h1, h2, h3, h4 {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Lato', sans-serif;
         text-align: center;
         
     }
     h1 {
-        font-size: 3em;
+        font-size: 2.5rem;
         font-weight: 900;
         line-height: 2em;
     }
     h3 {
-        font-style: italic;
-        font-size: 2em;
+        font-size: 1.3rem;
         line-height: 2em;
+    }
+    h5 {
+        font-family: 'Lato', sans-serif;
+        
     }
     p, li, ul {
         font-family: 'Cambay', sans-serif;
@@ -71,14 +74,13 @@ body {
                 text-align: center;
             }
             .meter { 
-                height: 15px;
+                height: 7px;
                 border-radius: 25px;
                 position: relative;
                 max-width: 350px;
                 flex: 2;
                 background: $progress-background;
                 align-self: center;
-                overflow: hidden;
                 span {
                     display: block;
                     border-radius: 20px;
@@ -89,7 +91,6 @@ body {
             .progress-bar {
                 background-color: $primary-1;
                 color: white;
-                font-family: monospace;
                 font-weight: 600;
                 text-align: right;
                 padding-right: 10px;
@@ -99,8 +100,82 @@ body {
                 // -webkit-animation-fill-mode:both; 
                 // -moz-animation: progressBar 3s ease-in-out;
                 // -moz-animation-fill-mode:both; 
+                
+                &::after {
+                    width: 15px;
+                    height: 15px;
+                    display: block;
+                    top: -6px;
+                    position: relative;
+                    left: 100%;                    
+                    border-radius: 10px;
+                    content: '';
+                    border: 2px solid white;
+                    background: $primary-1;
+                }   
             }
+        }
+        
+        .extra-skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1em;
             
+            .capsule {
+                background-color: $primary-1;
+                color: white;
+                padding: 6px 10px;
+                border-radius: .8em;
+                margin: 10px;
+                font-size: .9rem;
+            }
+        }
+    }
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2em;
+        .email, .location {
+            display: flex;
+            justify-content: center;
+            p{ 
+                display: flex;
+                margin: unset;
+                img {
+                    position: relative;
+                    margin-right: 8px;
+                    top: 3px;
+                }
+            }
+        }
+        
+        .location p img {
+            top: 7px;
+        }
+        
+        .social-media {
+            display: flex;
+            justify-content: space-evenly;
+            align-self: center;
+            width: 70%;
+            margin-top: 1em;
+            flex-wrap: wrap;
+            #twitter-green {
+                position: relative;
+                top: 2px;            
+            }
+            #gmail-green {
+                &:parent {
+                    display: none;
+                }
+                display: none;
+                position: relative;
+                width: 35px;
+                top: 4px;
+            }
         }
     }
 }
@@ -109,7 +184,7 @@ body {
 section {
     margin-top: 20px;
     
-    h3 {
+    h1 {
         color: $primary-1;
     }
 }
@@ -121,7 +196,7 @@ section {
     width: fit-content;
     font-size: 1.2rem;
     
-    .experience, .about-me {
+    .experience, .about-me, .education {
         margin-left: 2rem;
         margin-right: 2rem;
     }
@@ -131,56 +206,83 @@ section {
     }
 }
 
-.experience {
-    $border-color: $progress-background;
+// Timeline line and circle.
+.timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    color: $black;
+    border-left: 2px solid $progress-background;
     
-    .timeline-item {
-        padding: 3em 2em 2em;
-        position: relative;
-        color: $black;
-        border-left: 2px solid $border-color;
-        
-        p {
-            font-size: 1rem;
-        }
-
-        h5 {
-            font-family: 'Cambay', sans-serif;
-        }
-        
-        &::before {
-            content: attr(date-is);
-            position: absolute;
-            left: 2em;
-            font-weight: bold;
-            top: 1em;
-            display: block;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            font-size: .9rem;
-        }
-        
-        &::after {
-            width: 10px;
-            height: 10px;
-            display: block;
-            top: 1em;
-            position: absolute;
-            left: -7px;
-            border-radius: 10px;
-            content: '';
-            border: 2px solid $border-color;
-            background: white;
-        }
-        
-        &:last-child {
-            border-image: linear-gradient(
-            to bottom,
-            $border-color 60%,
-            rgba($border-color, 0)) 1 100%
-            ;
-        }
+    p {
+        font-size: 1rem;
     }
+    
+    &::before {
+        content: attr(date-is);
+        position: absolute;
+        left: 2em;
+        font-weight: bold;
+        top: 1.3em;
+        display: block;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: .9rem;
+        color: $black;
+    }
+    
+    &::after {
+        width: 15px;
+        height: 15px;
+        display: block;
+        top: 1em;
+        position: absolute;
+        left: -10px;
+        border-radius: 10px;
+        content: '';
+        border: 2px solid white;
+        background: $primary-1;
+    }
+    
+    &:last-child {
+        border-image: linear-gradient(
+        to bottom,
+        $progress-background 60%,
+        rgba($progress-background, 0)) 1 100%;
+    }
+}
+
+.education {
+    
+    .education-container{
+        display: flex;
+        justify-content: center;
+        
+        .right-section {
+            position: relative;
+            left: 5em;
+        }
+        
+        .timeline-item {
+            padding: 1em;
+            
+            h5 {
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+            
+            &::before {
+                left: -17em;
+                top: 2em;
+                position: relative;
+                text-align: right;
+            }
+            
+            
+            &::after {
+                top: 2.4em;
+            }
+        }
+    }    
 }
 
 .projects {
@@ -250,6 +352,7 @@ section {
                 
                 .meter {
                     align-self: unset;
+                    flex: unset;
                 }
             }
         }
@@ -265,6 +368,20 @@ section {
 }
 
 @media (max-width: 600px) {
+    .side-bar {
+        .contact {
+            .email, .location {
+                display: none;
+            }
+            .social-media #gmail-green {
+                &:parent {
+                    display: block;
+                }
+                display: block;
+            }
+        }
+    }
+    
     .projects {
         .project-container {
             .project-card {
@@ -280,5 +397,27 @@ section {
                 }
             }
         }
+    }
+    
+    .education {
+        .education-container {
+            .right-section {
+                position: unset;
+            }
+            
+            .timeline-item {
+                &::before {
+                    left: unset;
+                    top: 6.5em;
+                    text-align: unset;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 333px) {
+    .side-bar .contact .social-media #gmail-green {
+        top: -3px;
     }
 }
