@@ -4,12 +4,15 @@ $primary-green: #6FCF97;
 $progress-background: #d4d0cb;
 $black: rgba(black, .7);
 
+$primary-font: 'Lato', sans-serif;
+$secondary-font: 'Cambay', sans-serif;
+
 body {
     display: flex;
     margin: 0px;
     
     h1, h2, h3, h4 {
-        font-family: 'Lato', sans-serif;
+        font-family: $primary-font;
         text-align: center;
         
     }
@@ -23,11 +26,11 @@ body {
         line-height: 2em;
     }
     h5 {
-        font-family: 'Lato', sans-serif;
+        font-family: $primary-font;
         
     }
     p, li, ul {
-        font-family: 'Cambay', sans-serif;
+        font-family: $secondary-font;
         line-height: 2rem;
         color: $black;
     }
@@ -52,6 +55,8 @@ body {
         width: 10vw;
         max-width: 256px;
         max-height: 256px;
+        min-width: 100px;
+        min-height: 100px;
         border-radius: 50%;
         background-position-x: 30%;
         align-self: center;
@@ -65,13 +70,11 @@ body {
         
         .progress {
             display: flex;
-            justify-content: center;
             
             p{
-                font-style: italic;
-                width: 5vw;
-                margin: 1em;
-                text-align: center;
+                width: 6vw;
+                margin: 0.5em;
+                text-align: end;   
             }
             .meter { 
                 height: 7px;
@@ -123,6 +126,7 @@ body {
             margin-top: 1em;
             
             .capsule {
+                font-family: $primary-font;
                 background-color: $primary-1;
                 color: white;
                 padding: 6px 10px;
@@ -224,7 +228,7 @@ section {
         font-weight: bold;
         top: 1.3em;
         display: block;
-        font-family: 'Lato', sans-serif;
+        font-family: $primary-font;
         font-weight: 700;
         font-size: .9rem;
         color: $black;
@@ -348,6 +352,7 @@ section {
                 
                 p{
                     width: unset;
+                    text-align: center;
                 }
                 
                 .meter {
