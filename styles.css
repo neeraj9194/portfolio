@@ -52,8 +52,8 @@ body p, body li, body ul {
   background-image: url("/assets/portfolio.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 10vw;
-  width: 10vw;
+  height: 15vw;
+  width: 15vw;
   max-width: 256px;
   max-height: 256px;
   min-width: 100px;
