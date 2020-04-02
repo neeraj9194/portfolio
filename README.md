@@ -1,7 +1,7 @@
 # Portfolio Website
 
 ## Intro
-Hi my name is Neeraj. I love to build awesome webapp. This is my portfolio website, to show my skills and projects.
+Hi my name is Neeraj. I love to build awesome webapps. This is my portfolio website, to show my skills and projects.
 Website is build in only HTML and CSS.
 
 ## URL
