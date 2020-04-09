@@ -52,8 +52,8 @@ body p, body li, body ul {
   background-image: url("/assets/portfolio.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 15vw;
-  width: 15vw;
+  height: 12vw;
+  width: 12vw;
   max-width: 256px;
   max-height: 256px;
   min-width: 100px;
@@ -81,6 +81,8 @@ body p, body li, body ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  left: -20px;
 }
 
 .side-bar .skills .progress p {
@@ -209,20 +211,23 @@ body p, body li, body ul {
       flex-wrap: wrap;
 }
 
+.side-bar .contact .social-media #gmail-link {
+  display: none;
+}
+
 .side-bar .contact .social-media #twitter-green {
   position: relative;
   top: 2px;
 }
 
-.side-bar .contact .social-media #gmail-green {
-  display: none;
+.side-bar .contact .social-media #gmail-link img {
   position: relative;
   width: 35px;
   top: 4px;
 }
 
-.side-bar .contact .social-media #gmail-green:parent {
-  display: none;
+.side-bar .contact .social-media a {
+  margin: 5px;
 }
 
 section {
@@ -241,7 +246,7 @@ section h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 2vw;
+  margin: 0 3vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -401,6 +406,11 @@ section h1 {
           box-shadow: 10px 20px 40px rgba(61, 37, 37, 0.4);
 }
 
+.projects .project-container .project-card .project-heading .links .image-link {
+  display: none;
+  border-radius: 5px;
+}
+
 .projects .project-container .project-card .project-heading .links img {
   margin: 4px;
 }
@@ -411,6 +421,7 @@ section h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    left: 0;
   }
   .side-bar .skills .progress p {
     width: unset;
@@ -433,14 +444,17 @@ section h1 {
   .side-bar .contact .email, .side-bar .contact .location {
     display: none;
   }
-  .side-bar .contact .social-media #gmail-green {
-    display: block;
-  }
-  .side-bar .contact .social-media #gmail-green:parent {
+  .side-bar .contact .social-media #gmail-link {
     display: block;
   }
   .projects .project-container .project-card .project-heading .project-image {
     display: none;
+  }
+  .projects .project-container .project-card .project-heading .project-title {
+    margin-left: 0;
+  }
+  .projects .project-container .project-card .project-heading .links .image-link {
+    display: unset;
   }
   .projects .project-container .project-card .project-heading .links img {
     height: 48px;

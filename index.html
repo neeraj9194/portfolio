@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cambay|Playfair+Display:ital,wght@0,400;0,900;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lightbox.css">
 </head>
 <body>
     <div class="side-bar">
@@ -86,7 +87,7 @@
                 <p><a href="#" target="_blank"><img src="/assets/location-green.svg"></a><span>Pune, Maharashtra</span></p>
             </div>
             <div class="social-media">
-                <a href="mailto:kansalneeraj9194@gmail.com" target="_blank"><img id="gmail-green" src="/assets/gmail-green.svg"></a>
+                <a href="mailto:kansalneeraj9194@gmail.com" target="_blank" id="gmail-link"><img src="/assets/gmail-green.svg"></a>
                 <a href="https://github.com/neeraj9194" target="_blank"><img src="/assets/github-green.svg"></a>
                 <a href="https://twitter.com/NeerajKansal9" target="_blank"><img id="twitter-green" src="/assets/twitter-green.svg"></a>
                 <a href="https://www.facebook.com/neeraj9194" target="_blank"><img src="/assets/facebook-green.svg"></a>
@@ -155,13 +156,14 @@
             <div class="project-container">
                 <div class="project-card">
                     <div class="project-heading">
-                        <div class="project-image"><img src="/assets/kranzaa1.png"></div>
+                        <div class="project-image"><img src="/assets/kranzaa1.png" onclick="openModal();currentSlide(1)"></div>
                         <div class="project-title">
                             <h4>KRANZaa</h4>
                             <p>
                                 Store search and discovery service.
                             </p>
                             <div class="links">
+                                <img class="image-link" src="/assets/kranzaa1.png" height="48px" width="48px" onclick="openModal();currentSlide(1)">
                                 <a href="https://github.com/neeraj9194/kranzaa" target="_blank"><img src="/assets/github-link.svg"></a>
                                 <a href="https://kranzaa.herokuapp.com/" target="_blank"><img src="/assets/link.svg"></a>
                             </div>
@@ -242,5 +244,43 @@
             </div>
         </section>
     </div>
+    
+    <!-- Image popup modal -->
+    <div class="modal" id="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            
+            <div class="slides">
+                <img src="assets/kranzaa1.png" style="width:100%">
+            </div>
+            
+            <div class="slides">
+                <img src="assets/kranzaa2.png" style="width:100%">
+            </div>
+            
+            <div class="slides">
+                <img src="assets/kranzaa4.png" style="width:100%">
+            </div>
+            
+            <div class="slides">
+                <img src="assets/senti1.png" style="width:100%">
+            </div>
+            
+            <div class="slides">
+                <img src="assets/senti2.png" style="width:100%">
+            </div>
+            <div class="slides">
+                <img src="assets/senti3.png" style="width:100%">
+            </div>
+            <div class="slides">
+                <img src="assets/senti4.png" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    
+    <script src="lightbox.js"></script>
 </body>
 </html>
