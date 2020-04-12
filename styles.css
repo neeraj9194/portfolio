@@ -49,7 +49,7 @@ body p, body li, body ul {
 }
 
 .side-bar .portfolio-image {
-  background-image: url("/assets/portfolio.jpeg");
+  background-image: url("/assets/neeraj.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 12vw;
@@ -119,6 +119,8 @@ body p, body li, body ul {
   padding-right: 10px;
   font-size: 11px;
   line-height: 1.5;
+  -webkit-animation: progressBar 2s ease-out 500ms forwards;
+          animation: progressBar 2s ease-out 500ms forwards;
 }
 
 .side-bar .skills .progress .progress-bar::after {
@@ -402,8 +404,15 @@ section h1 {
      object-fit: fill;
   max-width: 500px;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 20px 40px rgba(61, 37, 37, 0.4);
-          box-shadow: 10px 20px 40px rgba(61, 37, 37, 0.4);
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
+  transition: box-shadow .3s, -webkit-box-shadow .3s;
+}
+
+.projects .project-container .project-card .project-heading .project-image img:hover {
+  -webkit-box-shadow: 7px 10px 10px rgba(61, 37, 37, 0.4);
+          box-shadow: 7px 10px 10px rgba(61, 37, 37, 0.4);
 }
 
 .projects .project-container .project-card .project-heading .links .image-link {
@@ -472,6 +481,24 @@ section h1 {
 @media (max-width: 333px) {
   .side-bar .contact .social-media #gmail-green {
     top: -3px;
+  }
+}
+
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

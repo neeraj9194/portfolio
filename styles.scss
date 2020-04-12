@@ -48,7 +48,7 @@ body {
     }
     
     .portfolio-image {
-        background-image: url("/assets/portfolio.jpeg");
+        background-image: url("/assets/neeraj.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
         height: 12vw;
@@ -101,10 +101,7 @@ body {
                 padding-right: 10px;
                 font-size: 11px;
                 line-height: 1.5;
-                // -webkit-animation: progressBar 3s ease-in-out;
-                // -webkit-animation-fill-mode:both; 
-                // -moz-animation: progressBar 3s ease-in-out;
-                // -moz-animation-fill-mode:both; 
+                animation: progressBar 2s ease-out 500ms forwards;
                 
                 &::after {
                     width: 15px;
@@ -329,14 +326,17 @@ section {
                 }
                 
                 .project-image {
-                    
                     img {
                         width: 250px;
                         height: 170px;
                         object-fit: fill;
                         max-width: 500px;
                         border-radius: 10px;
-                        box-shadow: 10px 20px 40px rgba(61, 37, 37, 0.4);
+                        transition: box-shadow .3s;
+
+                        &:hover {
+                            box-shadow: 7px 10px 10px rgba(61, 37, 37, 0.4);
+                        }
                     }
                 }
                 
@@ -441,3 +441,8 @@ section {
         top: -3px;
     }
 }
+
+@keyframes progressBar {
+    0%   {width:0;}
+    100% {width:100%;}
+  }
