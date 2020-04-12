@@ -49,7 +49,7 @@ body p, body li, body ul {
 }
 
 .side-bar .portfolio-image {
-  background-image: url("/assets/neeraj.jpeg");
+  background-image: url("assets/neeraj.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 12vw;
